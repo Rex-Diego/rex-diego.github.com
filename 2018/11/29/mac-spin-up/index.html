@@ -219,15 +219,21 @@
     </div>
     <div class="content-article">
         <h2 id="zero"><a href="#zero" class="headerlink" title="(zero)"></a>(zero)</h2><p>网络环境是一切的基础，真正高效的人不寄希望于国内镜像。<br><a href="https://github.com/erguotou520/electron-ssr/releases" target="_blank" rel="noopener">https://github.com/erguotou520/electron-ssr/releases</a></p>
-<h2 id="Brew"><a href="#Brew" class="headerlink" title="Brew"></a>Brew</h2><p>见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure></p>
-<p>直接测试<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 常用命令行工具</span><br><span class="line">wget下载点东西少不了的，偶尔挂个torrent活着magnet资源就要上aria2了，proxychains做命令行下的局部代理，sshfs＋vifm管理本地与远程文件。</span><br></pre></td></tr></table></figure></p>
-<p>brew install wget aria2c proxychains-ng sshfs vifm<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 免费Apps</span><br><span class="line">Safari很好，但是我依然选择chrome＋firefox双开：</span><br></pre></td></tr></table></figure></p>
-<p>brew cask install google-chrome firefox<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">当然，通常我也需要多个浏览器作为单独的环境：</span><br></pre></td></tr></table></figure></p>
-<p>brew cask install chromium waterfox vivaldi tor-browser<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">编辑器我选择Vim＋Emacs/Spacemacs，</span><br></pre></td></tr></table></figure></p>
-<p>brew install macvim<br>brew linkapps</p>
-<p>brew tap d12frosted/emacs-plus<br>brew install emacs-plus<br>brew linkapps emacs-plus<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 付费Apps</span><br><span class="line"></span><br><span class="line">装了Moom多年，很少用，因为Hyperdock的```ctrl＋opt＋上/下/左/右```满足了我大多数时候整理窗口的需求。</span><br></pre></td></tr></table></figure></p>
-<p>brew cask install Hyperdock<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## MAS</span><br><span class="line">安装：</span><br></pre></td></tr></table></figure></p>
-<p>brew install mas<br><code>`</code></p>
+<h2 id="Brew"><a href="#Brew" class="headerlink" title="Brew"></a>Brew</h2><p>见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
+<p>直接测试<code>git</code>，不能用会弹提示，顺便装好python，真是贴心。</p>
+<h3 id="常用命令行工具"><a href="#常用命令行工具" class="headerlink" title="常用命令行工具"></a>常用命令行工具</h3><p>wget下载点东西少不了的，偶尔挂个torrent活着magnet资源就要上aria2了，proxychains做命令行下的局部代理，sshfs＋vifm管理本地与远程文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install wget aria2c proxychains-ng sshfs vifm</span><br></pre></td></tr></table></figure>
+<h3 id="免费Apps"><a href="#免费Apps" class="headerlink" title="免费Apps"></a>免费Apps</h3><p>Safari很好，但是我依然选择chrome＋firefox双开：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install google-chrome firefox</span><br></pre></td></tr></table></figure>
+<p>当然，通常我也需要多个浏览器作为单独的环境：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install chromium waterfox vivaldi tor-browser</span><br></pre></td></tr></table></figure>
+<p>编辑器我选择Vim＋Emacs/Spacemacs，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">brew install macvim</span><br><span class="line">brew linkapps</span><br><span class="line"></span><br><span class="line">brew tap d12frosted/emacs-plus</span><br><span class="line">brew install emacs-plus</span><br><span class="line">brew linkapps emacs-plus</span><br></pre></td></tr></table></figure>
+<h3 id="付费Apps"><a href="#付费Apps" class="headerlink" title="付费Apps"></a>付费Apps</h3><p>装了Moom多年，很少用，因为Hyperdock的 <code>ctrl＋opt＋上/下/左/右</code> 满足了我大多数时候整理窗口的需求。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install Hyperdock</span><br></pre></td></tr></table></figure>
+<h2 id="MAS"><a href="#MAS" class="headerlink" title="MAS"></a>MAS</h2><p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mas</span><br></pre></td></tr></table></figure>
 
     </div>
 </article>
@@ -346,7 +352,7 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mac-software-tech/" style="font-size: 16.55637726673309px;" class="tag-cloud-link">mac, software, tech</a>
+    <a href="/tags/mac-software-tech/" style="font-size: 12.377151421271105px;" class="tag-cloud-link">mac, software, tech</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
