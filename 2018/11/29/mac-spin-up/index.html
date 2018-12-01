@@ -1,532 +1,753 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Rex">
-    
-    
-    
-    
-    
-    
-    <title>mac spin-up | Rex与藻藻泥</title>
-    <link href="”http://yoursite.com“" rel="”prefetch”">
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/aos.css">
-<link rel="stylesheet" href="/css/style.css">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/aos.js"></script>
-    <script src="/js/highslide/highslide-full.min.js"></script>
-    <link rel="stylesheet" href="/js/highslide/highslide.css">
-    <style type="text/css">
-        @media (max-width: 768px) {
-            body {
-                background-color: #f0f0f0;
-                background: url('/imgs/xsbg.gif');
-                background-attachment: fixed;
-            }
-        }
-    </style>
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
     
-    <!--<script type="text/javascript">
-      if (document.images) {
-        var avatar = new Image();
-        avatar.src = '/imgs/avatar2.jpg'
-        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
-        var previewsPreLoad = []
-        for(var i = 0; i < length; i++) {
-          previewsPreLoad.push(new Image())
-          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
-        }
-      }
-    </script>-->
-</head></html>
-<body>
-    <!-- 背景轮播图功能 -->
-    <section class="hidden-xs">
-    <ul class="cb-slideshow">
-        <li><span>天若</span></li>
-        <li><span>有情</span></li>
-        <li><span>天亦老</span></li>
-        <li><span>我为</span></li>
-        <li><span>长者</span></li>
-        <li><span>续一秒</span></li>
-    </ul>
-</section>
-    <!-- 欧尼酱功能, 谁用谁知道 -->
     
-    <div class="gal-menu gal-dropdown">
-    <div class="circle" id="gal">
-        <div class="ring">
-            <a href="http://yoursite.com" class="menuItem" style="left: 50%; top: 15%;">首页</a>
-            
-            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
-            
-            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
-            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
-            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
-            
-            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
-            
-        </div>
-        <audio id="audio" src="/imgs/oni.mp3"></audio>
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="software,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="(zero)网络环境是一切的基础，真正高效的人不寄希望于国内镜像。https://github.com/erguotou520/electron-ssr/releases Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。 1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst">
+<meta name="keywords" content="software">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac spin-up">
+<meta property="og:url" content="http://yoursite.com/2018/11/29/mac-spin-up/index.html">
+<meta property="og:site_name" content="Rex与藻藻泥">
+<meta property="og:description" content="(zero)网络环境是一切的基础，真正高效的人不寄希望于国内镜像。https://github.com/erguotou520/electron-ssr/releases Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。 1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-01T12:14:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mac spin-up">
+<meta name="twitter:description" content="(zero)网络环境是一切的基础，真正高效的人不寄希望于国内镜像。https://github.com/erguotou520/electron-ssr/releases Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。 1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/29/mac-spin-up/">
+
+
+
+
+
+  <title>mac spin-up | Rex与藻藻泥</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Rex与藻藻泥</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
+      
+        <p class="site-subtitle">love & peace</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            Sitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-    <header class="navbar navbar-inverse" id="gal-header">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse" aria-expanded="false">
-                <span class="fa fa-lg fa-reorder"></span>
-            </button>
-            <a href="http://yoursite.com">
-                
-                <style>
-                    #gal-header .navbar-brand {
-                        height: 54px;
-                        line-height: 24px;
-                        font-size: 28px;
-                        opacity: 1;
-                        background-color: rgba(0,0,0,0);
-                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
-                    }
-                </style>
-                <!-- 这里使用文字(navbar_text or config.title) -->
-                <div class="navbar-brand">藻藻泥</div>
-                
-            </a>
-        </div>
-        <div class="collapse navbar-collapse bs-navbar-collapse">
-            <ul class="nav navbar-nav" id="menu-gal">
-                
-                
-                <li class="">
-                    <a href="/">
-                        <i class="fa fa-home"></i>首页
-                    </a>
-                </li>
-                
-                
-                
-                <li class="">
-                    <a href="/archives">
-                        <i class="fa fa-archive"></i>归档
-                    </a>
-                </li>
-                
-                
-                
-                
-                <li class="">
-                    <a href="/categories">
-                        <i class="fa fa-list"></i>分类
-                    </a>
-                </li>
-                
-                
-                
-                
-                
-                <li class="dropdown">
-                    <!-- TODO 添加hover dropdown效果 -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-                        <i class="fa fa-tags"></i>标签
-                    </a>
-                    <ul class="dropdown-menu">
-                        
-                        
-                        <li>
-                            <a href="/tags/mac-software-tech/">mac, software, tech</a>
-                        </li>
-                        
-                        
-                        
-                    </ul>
-                </li>
-                
-                
-                
-                
-                <li class="">
-                    <a href="/about">
-                        <i class="fa fa-user"></i>关于我
-                    </a>
-                </li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</header>
-    <div id="gal-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 gal-right" id="mainstay">
-                    
-<article class="article well article-body" id="article">
-    <div class="breadcrumb">
-        <i class="fa fa-home"></i>
-        <a href="http://yoursite.com">Rex与藻藻泥</a>
-        >
-        <span>mac spin-up</span>
-    </div>
-    <!-- 大型设备详细文章 -->
-    <div class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2018/11/29/mac-spin-up/">mac spin-up</a>
-            </h1>
-        </div>
-        <div class="tag-article">
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/29/mac-spin-up/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rex">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rex与藻藻泥">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">mac spin-up</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
-            <span class="label label-gal">
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/mac-software-tech/">mac, software, tech</a>
-                
-            </span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-29T19:26:54+08:00">
+                2018-11-29
+              </time>
             
-            <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-11-29
-            </span>
+
             
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-    </div>
-    <!-- 小型设备详细文章 -->
-    <div class="visible-xs">
-        <center>
-            <div class="title-article">
-                <h4>
-                    <a href="/2018/11/29/mac-spin-up/">mac spin-up</a>
-                </h4>
-            </div>
-            <p>
-                <i class="fa fa-calendar"></i> 2018-11-29
-            </p>
-            <p>
-                
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/mac-software-tech/">mac, software, tech</a>
-                
-                
-                
-            </p>
-        </center>
-    </div>
-    <div class="content-article">
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
         <h2 id="zero"><a href="#zero" class="headerlink" title="(zero)"></a>(zero)</h2><p>网络环境是一切的基础，真正高效的人不寄希望于国内镜像。<br><a href="https://github.com/erguotou520/electron-ssr/releases" target="_blank" rel="noopener">https://github.com/erguotou520/electron-ssr/releases</a></p>
 <h2 id="Brew"><a href="#Brew" class="headerlink" title="Brew"></a>Brew</h2><p>见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。</p>
-<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-</code></pre><p>直接测试<code>git</code>，不能用会弹提示，顺便装好python，真是贴心。当然也可以<code>xcode-select --install</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<p>直接测试<code>git</code>，不能用会弹提示，顺便装好python，真是贴心。当然也可以<code>xcode-select --install</code>。</p>
 <p>基本操作：</p>
-<pre><code>brew search xxx     # 模糊搜索某个软件
-brew install xxx    # 安装某个软件
-brew upgrade xxx    # 升级某个软件
-brew uninstall xxx  # 卸载某个软件
-brew list xxx       # 列出某个软件的所有相关文件
-</code></pre><h3 id="命令行工具系列"><a href="#命令行工具系列" class="headerlink" title="命令行工具系列"></a>命令行工具系列</h3><p>wget下载点东西少不了的，偶尔挂个torrent活着magnet资源就要上aria2了，proxychains做命令行下的局部代理，sshfs＋vifm管理本地与远程文件。</p>
-<pre><code>brew install 
-    wget \              #初级下载
-    aria2c \            #进阶下载
-    proxychains-ng \    #网络代理后面的命令
-    sshfs \             #ssh挂载到本地作为磁盘
-    vifm                #vim模式、命令行端的Total Commander
-</code></pre><h3 id="Cask-APP系列"><a href="#Cask-APP系列" class="headerlink" title="Cask APP系列"></a>Cask APP系列</h3><h4 id="免费区"><a href="#免费区" class="headerlink" title="免费区"></a>免费区</h4><p>Safari很好，但是我依然选择chrome＋firefox双开：</p>
-<pre><code>brew cask install google-chrome firefox 
-</code></pre><p>当然，通常我也需要多个浏览器作为单独的环境：</p>
-<pre><code>brew cask install chromium waterfox vivaldi tor-browser 
-</code></pre><p>编辑器我选择Vim＋Emacs/Spacemacs，</p>
-<pre><code>brew install macvim
-ln -Fs `find /usr/local -name &quot;MacVim.app&quot;` /Applications/ ＃linkapps命令被brew废了。。心塞
-
-brew tap d12frosted/emacs-plus
-brew install emacs-plus
-</code></pre><p>一些常规App：</p>
-<pre><code>brew cask install \
-    alfred \            #spotlight升级以后也不怎么用得到了，但是可拓展性确实强，比较耐玩
-    caffeine \          #“mac，两小时内不许睡”
-    cheatsheet \        #“那个快捷键是什么来着”，“长按command”
-    docker \            #专治水土不服
-    dropbox \           #催眠：18G够用了
-    google-drive \      #催眠：17G够用了
-    onedrive \          #5T真的不够啊！
-    flux \              #保护眼睛，从使用黄色屏幕开始。。
-    sublime-text \      #Atom最棒，Subl真香
-    qq \                #屈服于鹅肠
-    wechat \            #不服不行
-    evernote \          #从evernote到onenote是一个漫长的过程
-    owncloud \          #不用国内云，别问我问什么
-    scroll-reverser \   #没有magicmouse也不担心反人类的滚轮方向
-    rmtrash \           #妈妈在也不担心我在命令行下rm误删了
-    htop \              #监视、管理你的系统进程
-    mactex \            #写论文。。
-    panoply \           #不学大气的人表示：这什么鬼
-    neteasemusic \
-    free-download-manager \
-    qlcolorcode \
-    qlstephen \
-    qlmarkdown  \
-    java \
-    iina                #真的良心，开源免费，堪比Windows下的Potplayer
-</code></pre><p>如果你愿意也可以加个字体：<br>加两个源：</p>
-<pre><code>brew tap homebrew/cask-fonts
-brew cask install font-source-code-pro
-</code></pre><h4 id="收费区"><a href="#收费区" class="headerlink" title="收费区"></a>收费区</h4><p>装了Moom多年，很少用，因为Hyperdock的 <code>ctrl＋opt＋上/下/左/右</code> 满足了我大多数时候整理窗口的需求，在mac下找到windows的窗口管理体验。dock收费，switch免费。</p>
-<pre><code>brew cask install hyperdock hyperswitch
-</code></pre><p>常规软件：</p>
-<pre><code>brew cask install 
-    surge \                 #网络代理
-    proxifier \             #将socks真正变成系统级别代理
-    cleanmymac \            #论功能我服，UI我更服
-    endnote \               #文献管理
-    microsoft-office \      #2016、2019已经相当好了
-    iTerms                  #都说比Termimal好用
-</code></pre><p>放不下windows？你想要的我都有：<code>parallel-desktop</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">brew search xxx     <span class="comment"># 模糊搜索某个软件</span></span><br><span class="line">brew install xxx    <span class="comment"># 安装某个软件</span></span><br><span class="line">brew upgrade xxx    <span class="comment"># 升级某个软件</span></span><br><span class="line">brew uninstall xxx  <span class="comment"># 卸载某个软件</span></span><br><span class="line">brew list xxx       <span class="comment"># 列出某个软件的所有相关文件</span></span><br></pre></td></tr></table></figure>
+<h3 id="命令行工具系列"><a href="#命令行工具系列" class="headerlink" title="命令行工具系列"></a>命令行工具系列</h3><p>wget下载点东西少不了的，偶尔挂个torrent活着magnet资源就要上aria2了，proxychains做命令行下的局部代理，sshfs＋vifm管理本地与远程文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">brew install </span><br><span class="line">    wget \              <span class="comment">#初级下载</span></span><br><span class="line">    aria2c \            <span class="comment">#进阶下载</span></span><br><span class="line">    proxychains-ng \    <span class="comment">#网络代理后面的命令</span></span><br><span class="line">    sshfs \             <span class="comment">#ssh挂载到本地作为磁盘</span></span><br><span class="line">    vifm                <span class="comment">#vim模式、命令行端的Total Commander</span></span><br></pre></td></tr></table></figure>
+<h3 id="Cask-APP系列"><a href="#Cask-APP系列" class="headerlink" title="Cask APP系列"></a>Cask APP系列</h3><h4 id="免费区"><a href="#免费区" class="headerlink" title="免费区"></a>免费区</h4><p>Safari很好，但是我依然选择chrome＋firefox双开：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install google-chrome firefox</span><br></pre></td></tr></table></figure>
+<p>当然，通常我也需要多个浏览器作为单独的环境：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install chromium waterfox vivaldi tor-browser</span><br></pre></td></tr></table></figure>
+<p>编辑器我选择Vim＋Emacs/Spacemacs，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">brew install macvim</span><br><span class="line">ln -Fs `find /usr/<span class="built_in">local</span> -name <span class="string">"MacVim.app"</span>` /Applications/ ＃linkapps命令被brew废了。。心塞</span><br><span class="line"></span><br><span class="line">brew tap d12frosted/emacs-plus</span><br><span class="line">brew install emacs-plus</span><br></pre></td></tr></table></figure>
+<p>一些常规App：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">brew cask install \</span><br><span class="line">    alfred \            <span class="comment">#spotlight升级以后也不怎么用得到了，但是可拓展性确实强，比较耐玩</span></span><br><span class="line">    caffeine \          <span class="comment">#“mac，两小时内不许睡”</span></span><br><span class="line">    cheatsheet \        <span class="comment">#“那个快捷键是什么来着”，“长按command”</span></span><br><span class="line">    docker \            <span class="comment">#专治水土不服</span></span><br><span class="line">    dropbox \           <span class="comment">#催眠：18G够用了</span></span><br><span class="line">    google-drive \      <span class="comment">#催眠：17G够用了</span></span><br><span class="line">    onedrive \          <span class="comment">#5T真的不够啊！</span></span><br><span class="line">    flux \              <span class="comment">#保护眼睛，从使用黄色屏幕开始。。</span></span><br><span class="line">    sublime-text \      <span class="comment">#Atom最棒，Subl真香</span></span><br><span class="line">    qq \                <span class="comment">#屈服于鹅肠</span></span><br><span class="line">    wechat \            <span class="comment">#不服不行</span></span><br><span class="line">    evernote \          <span class="comment">#从evernote到onenote是一个漫长的过程</span></span><br><span class="line">    owncloud \          <span class="comment">#不用国内云，别问我问什么</span></span><br><span class="line">    scroll-reverser \   <span class="comment">#没有magicmouse也不担心反人类的滚轮方向</span></span><br><span class="line">    rmtrash \           <span class="comment">#妈妈在也不担心我在命令行下rm误删了</span></span><br><span class="line">    htop \              <span class="comment">#监视、管理你的系统进程</span></span><br><span class="line">    mactex \            <span class="comment">#写论文。。</span></span><br><span class="line">    panoply \           <span class="comment">#不学大气的人表示：这什么鬼</span></span><br><span class="line">    neteasemusic \      <span class="comment">#网易云音乐</span></span><br><span class="line">    free-download-manager \ <span class="comment">#支持各种下载</span></span><br><span class="line">    qlcolorcode \       <span class="comment">#空格键预览高亮代码</span></span><br><span class="line">    qlstephen \         <span class="comment">#预览README文件</span></span><br><span class="line">    qlmarkdown  \       <span class="comment">#预览md文件</span></span><br><span class="line">    java \              <span class="comment">#java环境</span></span><br><span class="line">    xquartz \           <span class="comment">#ssh -Y看不到GUI不怪你，因为需要重启</span></span><br><span class="line">    iina                <span class="comment">#真的良心，开源免费，堪比Windows下的Potplayer</span></span><br></pre></td></tr></table></figure>
+<p>如果你愿意也可以加个字体：<br>加两个源：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap homebrew/cask-fonts</span><br><span class="line">brew cask install font-source-code-pro</span><br></pre></td></tr></table></figure>
+<h4 id="收费区"><a href="#收费区" class="headerlink" title="收费区"></a>收费区</h4><p>装了Moom多年，很少用，因为Hyperdock的 <code>ctrl＋opt＋上/下/左/右</code> 满足了我大多数时候整理窗口的需求，在mac下找到windows的窗口管理体验。dock收费，switch免费。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install hyperdock hyperswitch</span><br></pre></td></tr></table></figure>
+<p>常规软件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">brew cask install </span><br><span class="line">    surge \                 <span class="comment">#网络代理</span></span><br><span class="line">    proxifier \             <span class="comment">#将socks真正变成系统级别代理</span></span><br><span class="line">    cleanmymac \            <span class="comment">#论功能我服，UI我更服</span></span><br><span class="line">    endnote \               <span class="comment">#文献管理</span></span><br><span class="line">    microsoft-office \      <span class="comment">#2016、2019已经相当好了</span></span><br><span class="line">    iTerms                  <span class="comment">#都说比Termimal好用</span></span><br></pre></td></tr></table></figure>
+<p>放不下windows？你想要的我都有：<code>parallel-desktop</code></p>
 <h2 id="MAS"><a href="#MAS" class="headerlink" title="MAS"></a>MAS</h2><p>不堪忍受App Store的低效率，于是有了MAS。之所以这一部分不用brew是考虑到苹果的授权管理比较方便，不需要保存购买一家家软件的许可凭证，所以App Store上架的应用我一般就直接买了而不是去其自己家的网站下载。</p>
 <p>安装：</p>
-<pre><code>brew install mas
-</code></pre><p>常规操作：</p>
-<pre><code>mas search xxx
-mas install xxx
-</code></pre><p>常用的装了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mas</span><br></pre></td></tr></table></figure>
+<p>常规操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mas search xxx</span><br><span class="line">mas install xxx</span><br></pre></td></tr></table></figure>
+<p>常用的装了：</p>
 <p>PDF export<br>Spark<br>Paste 2<br>Popclip<br>iThoughtsX<br>Evernote<br>Day One<br>Eudic</p>
 <p>不常用的也装了：</p>
 <p>DaisyDisk<br>Movist<br>Pin<br>Magnet<br>EasyRes<br>Forklift<br>Growl<br>Battery Charging Alert<br>Reeder 3</p>
-<h2 id="X11"><a href="#X11" class="headerlink" title="X11"></a>X11</h2><p><code>ssh -Y</code>看不到GUI不怪你，因为这事真的麻烦。</p>
-<pre><code>brew cask install xquartz
-</code></pre><p>然后修改</p>
-<p><img src="/images/201.jpg" alt="img_test"></p>
-<figure class="highlight"><pre><font face="monospace"><span id="L1" style="background-color: #303030"><font color="#bcbcbc">1&#xA0;</font></span>import sys
-<span id="L2" style="background-color: #303030"><font color="#bcbcbc">2&#xA0;</font></span>sys.stdout.write(&quot;Hello World!&quot;)
-</font></pre></figure>
-<pre><code>var arr1 = new Array(arrayLength);
-var arr2 = new Array(element0, element1, ..., elementN);</code></pre>
 
+      
     </div>
-</article>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/software/" rel="tag"># software</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-                </div>
-                <aside class="col-md-4 gal-left" id="sidebar">
-    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
-<aside id="sidebar-search">
-    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <form class="form-inline clearfix" id="search-form" method="get" action="/search/index.html">
-            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~">
-            <button class="btn btn-danger btn-gal" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </form>
+
+    <div class="post-spread">
+      
     </div>
-</aside>
-    <aside id="sidebar-author">
-    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
-        <div class="panel-heading" style="text-align: center">
-            <i class="fa fa-quote-left"></i>
-            Rex
-            <i class="fa fa-quote-right"></i>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
         </div>
-        <div class="author-panel text-center">
-            <img src="/imgs/avatar2.jpg" width="140" height="140" alt="个人头像" class="author-image">
-            <p class="author-description"></p>
-        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
-</aside>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
     
-    <aside id="sidebar-recent_comments">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-comments"></i>
-            最新评论
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush"></ul>
-    </div>
-</aside>
-    
-    <!-- 要配置好leancloud才能开启此小工具 -->
-    
-    
-    <aside id="sidebar-recent_posts">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-refresh"></i>
-            近期文章
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush">
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/11/29/mac-spin-up/">mac spin-up</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/11/27/hello-world/">Hello World</a>
-                </span>
-            </li>
-            
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
         </ul>
-    </div>
-</aside>
-    
-    
-    <aside id="sidebar-rand_posts">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-refresh"></i>
-            随机文章
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush">
-            
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/11/29/mac-spin-up/">mac spin-up</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/11/27/hello-world/">Hello World</a>
-                </span>
-            </li>
-            
-        </ul>
-    </div>
-</aside>
-    
-    
-    <aside id="gal-sets">
-        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-            <ul class="nav nav-pills pills-gal">
-                <li class="">
-                    <a href="/2018/11/29/mac-spin-up/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
-                </li>
-                <li class="">
-                    <a href="/2018/11/29/mac-spin-up/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
-                </li>
-                <li class="">
-                    <a href="/2018/11/29/mac-spin-up/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
-    
-    <a href="/tags/mac-software-tech/" style="font-size: 11.93960238421024px;" class="tag-cloud-link">mac, software, tech</a>
-    
-</div>
-                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
-    
-    <li>
-        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
-    </li>
-    
-    <li>
-        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
-    </li>
-    
-    <li>
-        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
-    </li>
-    
-</div>
-                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
-    
-    <li>
-        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
-    </li>
-    
-    <li>
-        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
-    </li>
-    
-    <li>
-        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
-    </li>
-    
-</div>
-            </div>
-        </div>
-    </aside>
-    
-</aside>
-            </div>
-        </div>
-    </div>
-    <footer id="gal-footer">
-    <div class="container">
-        Copyright © 2018 Rex Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
-    </div>
-</footer>
+      
 
-<!-- 回到顶端 -->
-<div id="gal-gotop">
-    <i class="fa fa-angle-up"></i>
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Rex</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#zero"><span class="nav-number">1.</span> <span class="nav-text">(zero)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Brew"><span class="nav-number">2.</span> <span class="nav-text">Brew</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行工具系列"><span class="nav-number">2.1.</span> <span class="nav-text">命令行工具系列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cask-APP系列"><span class="nav-number">2.2.</span> <span class="nav-text">Cask APP系列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#免费区"><span class="nav-number">2.2.1.</span> <span class="nav-text">免费区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#收费区"><span class="nav-number">2.2.2.</span> <span class="nav-text">收费区</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAS"><span class="nav-number">3.</span> <span class="nav-text">MAS</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rex</span>
+
+  
 </div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
-<script src="/js/activate-power-mode.js"></script>
-<script>
-
-    // 配置highslide
-	hs.graphicsDir = '/js/highslide/graphics/'
-    hs.outlineType = "rounded-white";
-    hs.dimmingOpacity = 0.8;
-    hs.outlineWhileAnimating = true;
-    hs.showCredits = false;
-    hs.captionEval = "this.thumb.alt";
-    hs.numberPosition = "caption";
-    hs.align = "center";
-    hs.transitions = ["expand", "crossfade"];
-    hs.lang.number = '共%2张图, 当前是第%1张';
-    hs.addSlideshow({
-      interval: 5000,
-      repeat: true,
-      useControls: true,
-      fixedControls: "fit",
-      overlayOptions: {
-        opacity: 0.75,
-        position: "bottom center",
-        hideOnMouseOut: true
-      }
-    })
-
-    // 初始化aos
-    AOS.init({
-      duration: 1000,
-      delay: 0,
-      easing: 'ease-out-back'
-    });
-
-</script>
-<script>
-	POWERMODE.colorful = 'true';    // make power mode colorful
-	POWERMODE.shake = 'true';       // turn off shake
-	// TODO 这里根据具体情况修改
-	document.body.addEventListener('input', POWERMODE);
-</script>
-<script>
-    window.slideConfig = {
-      prefix: '/imgs/slide/background',
-      ext: 'jpg',
-      maxCount: '9'
-    }
-</script>
-<script src="/js/hs.js"></script>
-<script src="/js/blog.js"></script>
-
-<script src="/js/oni.js"></script>
-
-
-
 </html>
