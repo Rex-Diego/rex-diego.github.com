@@ -220,44 +220,91 @@
     <div class="content-article">
         <h2 id="zero"><a href="#zero" class="headerlink" title="(zero)"></a>(zero)</h2><p>网络环境是一切的基础，真正高效的人不寄希望于国内镜像。<br><a href="https://github.com/erguotou520/electron-ssr/releases" target="_blank" rel="noopener">https://github.com/erguotou520/electron-ssr/releases</a></p>
 <h2 id="Brew"><a href="#Brew" class="headerlink" title="Brew"></a>Brew</h2><p>见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">/usr/</span>bin<span class="regexp">/ruby -e "$(curl -fsSL https:/</span><span class="regexp">/raw.githubusercontent.com/</span>Homebrew<span class="regexp">/install/m</span>aster<span class="regexp">/install)"</span></span><br></pre></td></tr></table></figure>
-<p>直接测试<code>git</code>，不能用会弹提示，顺便装好python，真是贴心。当然也可以<code>xcode-select --install</code>。</p>
+<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre><p>直接测试<code>git</code>，不能用会弹提示，顺便装好python，真是贴心。当然也可以<code>xcode-select --install</code>。</p>
 <p>基本操作：</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">brew </span>search xxx     <span class="comment"># 模糊搜索某个软件</span></span><br><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>xxx    <span class="comment"># 安装某个软件</span></span><br><span class="line"><span class="keyword">brew </span>upgrade xxx    <span class="comment"># 升级某个软件</span></span><br><span class="line"><span class="keyword">brew </span>uninstall xxx  <span class="comment"># 卸载某个软件</span></span><br><span class="line"><span class="keyword">brew </span>list xxx       <span class="comment"># 列出某个软件的所有相关文件</span></span><br></pre></td></tr></table></figure>
-<h3 id="命令行工具系列"><a href="#命令行工具系列" class="headerlink" title="命令行工具系列"></a>命令行工具系列</h3><p>wget下载点东西少不了的，偶尔挂个torrent活着magnet资源就要上aria2了，proxychains做命令行下的局部代理，sshfs＋vifm管理本地与远程文件。</p>
-<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line">brew install </span><br><span class="line">    wget <span class="string">\</span>              <span class="comment">#初级下载</span></span><br><span class="line">    aria2c <span class="string">\</span>            <span class="comment">#进阶下载</span></span><br><span class="line">    proxychains-ng <span class="string">\</span>    <span class="comment">#网络代理后面的命令</span></span><br><span class="line">    sshfs <span class="string">\</span>             <span class="comment">#ssh挂载到本地作为磁盘</span></span><br><span class="line">    vifm                <span class="comment">#vim模式、命令行端的Total Commander</span></span><br></pre></td></tr></table></figure>
-<h3 id="Cask-APP系列"><a href="#Cask-APP系列" class="headerlink" title="Cask APP系列"></a>Cask APP系列</h3><h4 id="免费区"><a href="#免费区" class="headerlink" title="免费区"></a>免费区</h4><p>Safari很好，但是我依然选择chrome＋firefox双开：</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">brew </span>cask <span class="keyword">install </span>google-chrome firefox</span><br></pre></td></tr></table></figure>
-<p>当然，通常我也需要多个浏览器作为单独的环境：</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">brew </span>cask <span class="keyword">install </span>chromium waterfox vivaldi tor-<span class="keyword">browser</span></span><br></pre></td></tr></table></figure>
-<p>编辑器我选择Vim＋Emacs/Spacemacs，</p>
-<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">brew </span>install macvim</span><br><span class="line"><span class="symbol">ln</span> -Fs `find /usr/local -name <span class="string">"MacVim.app"</span>` /Applications/ ＃linkapps命令被<span class="keyword">brew废了。。心塞</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">brew </span>tap d12frosted/emacs-plus</span><br><span class="line"><span class="keyword">brew </span>install emacs-plus</span><br></pre></td></tr></table></figure>
-<p>一些常规App：</p>
-<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line">brew cask install <span class="string">\</span></span><br><span class="line">    alfred <span class="string">\</span>            <span class="comment">#spotlight升级以后也不怎么用得到了，但是可拓展性确实强，比较耐玩</span></span><br><span class="line">    caffeine <span class="string">\</span>          <span class="comment">#“mac，两小时内不许睡”</span></span><br><span class="line">    cheatsheet <span class="string">\</span>        <span class="comment">#“那个快捷键是什么来着”，“长按command”</span></span><br><span class="line">    docker <span class="string">\</span>            <span class="comment">#专治水土不服</span></span><br><span class="line">    dropbox <span class="string">\</span>           <span class="comment">#催眠：18G够用了</span></span><br><span class="line">    google-drive <span class="string">\</span>      <span class="comment">#催眠：17G够用了</span></span><br><span class="line">    onedrive <span class="string">\</span>          <span class="comment">#5T真的不够啊！</span></span><br><span class="line">    flux <span class="string">\</span>              <span class="comment">#保护眼睛，从使用黄色屏幕开始。。</span></span><br><span class="line">    sublime-text <span class="string">\</span>      <span class="comment">#Atom最棒，Subl真香</span></span><br><span class="line">    qq <span class="string">\</span>                <span class="comment">#屈服于鹅肠</span></span><br><span class="line">    wechat <span class="string">\</span>            <span class="comment">#不服不行</span></span><br><span class="line">    evernote <span class="string">\</span>          <span class="comment">#从evernote到onenote是一个漫长的过程</span></span><br><span class="line">    owncloud <span class="string">\</span>          <span class="comment">#不用国内云，别问我问什么</span></span><br><span class="line">    scroll-reverser <span class="string">\</span>   <span class="comment">#没有magicmouse也不担心反人类的滚轮方向</span></span><br><span class="line">    rmtrash <span class="string">\</span>           <span class="comment">#妈妈在也不担心我在命令行下rm误删了</span></span><br><span class="line">    htop <span class="string">\</span>              <span class="comment">#监视、管理你的系统进程</span></span><br><span class="line">    mactex <span class="string">\</span>            <span class="comment">#写论文。。</span></span><br><span class="line">    panoply <span class="string">\</span>           <span class="comment">#不学大气的人表示：这什么鬼</span></span><br><span class="line">    neteasemusic <span class="string">\</span></span><br><span class="line">    free-download-manager <span class="string">\</span></span><br><span class="line">    qlcolorcode <span class="string">\</span></span><br><span class="line">    qlstephen <span class="string">\</span></span><br><span class="line">    qlmarkdown  <span class="string">\</span></span><br><span class="line">    java <span class="string">\</span></span><br><span class="line">    iina                <span class="comment">#真的良心，开源免费，堪比Windows下的Potplayer</span></span><br></pre></td></tr></table></figure>
-<p>如果你愿意也可以加个字体：<br>加两个源：</p>
-<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">brew </span>tap homebrew/cask-fonts</span><br><span class="line"><span class="keyword">brew </span>cask install font-source-<span class="meta">code</span>-pro</span><br></pre></td></tr></table></figure>
-<h4 id="收费区"><a href="#收费区" class="headerlink" title="收费区"></a>收费区</h4><p>装了Moom多年，很少用，因为Hyperdock的 <code>ctrl＋opt＋上/下/左/右</code> 满足了我大多数时候整理窗口的需求，在mac下找到windows的窗口管理体验。dock收费，switch免费。</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">brew </span>cask <span class="keyword">install </span>hyperdock hyperswitch</span><br></pre></td></tr></table></figure>
-<p>常规软件：</p>
-<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line">brew cask install </span><br><span class="line">    surge <span class="string">\</span>                 <span class="comment">#网络代理</span></span><br><span class="line">    proxifier <span class="string">\</span>             <span class="comment">#将socks真正变成系统级别代理</span></span><br><span class="line">    cleanmymac <span class="string">\</span>            <span class="comment">#论功能我服，UI我更服</span></span><br><span class="line">    endnote <span class="string">\</span>               <span class="comment">#文献管理</span></span><br><span class="line">    microsoft-office <span class="string">\</span>      <span class="comment">#2016、2019已经相当好了</span></span><br><span class="line">    iTerms                  <span class="comment">#都说比Termimal好用</span></span><br></pre></td></tr></table></figure>
-<p>放不下windows？你想要的我都有：<code>parallel-desktop</code></p>
+<pre><code>brew search xxx     # 模糊搜索某个软件
+brew install xxx    # 安装某个软件
+brew upgrade xxx    # 升级某个软件
+brew uninstall xxx  # 卸载某个软件
+brew list xxx       # 列出某个软件的所有相关文件
+</code></pre><h3 id="命令行工具系列"><a href="#命令行工具系列" class="headerlink" title="命令行工具系列"></a>命令行工具系列</h3><p>wget下载点东西少不了的，偶尔挂个torrent活着magnet资源就要上aria2了，proxychains做命令行下的局部代理，sshfs＋vifm管理本地与远程文件。</p>
+<pre><code>brew install 
+    wget \              #初级下载
+    aria2c \            #进阶下载
+    proxychains-ng \    #网络代理后面的命令
+    sshfs \             #ssh挂载到本地作为磁盘
+    vifm                #vim模式、命令行端的Total Commander
+</code></pre><h3 id="Cask-APP系列"><a href="#Cask-APP系列" class="headerlink" title="Cask APP系列"></a>Cask APP系列</h3><h4 id="免费区"><a href="#免费区" class="headerlink" title="免费区"></a>免费区</h4><p>Safari很好，但是我依然选择chrome＋firefox双开：</p>
+<pre><code>brew cask install google-chrome firefox 
+</code></pre><p>当然，通常我也需要多个浏览器作为单独的环境：</p>
+<pre><code>brew cask install chromium waterfox vivaldi tor-browser 
+</code></pre><p>编辑器我选择Vim＋Emacs/Spacemacs，</p>
+<pre><code>brew install macvim
+ln -Fs `find /usr/local -name &quot;MacVim.app&quot;` /Applications/ ＃linkapps命令被brew废了。。心塞
+
+brew tap d12frosted/emacs-plus
+brew install emacs-plus
+</code></pre><p>一些常规App：</p>
+<pre><code>brew cask install \
+    alfred \            #spotlight升级以后也不怎么用得到了，但是可拓展性确实强，比较耐玩
+    caffeine \          #“mac，两小时内不许睡”
+    cheatsheet \        #“那个快捷键是什么来着”，“长按command”
+    docker \            #专治水土不服
+    dropbox \           #催眠：18G够用了
+    google-drive \      #催眠：17G够用了
+    onedrive \          #5T真的不够啊！
+    flux \              #保护眼睛，从使用黄色屏幕开始。。
+    sublime-text \      #Atom最棒，Subl真香
+    qq \                #屈服于鹅肠
+    wechat \            #不服不行
+    evernote \          #从evernote到onenote是一个漫长的过程
+    owncloud \          #不用国内云，别问我问什么
+    scroll-reverser \   #没有magicmouse也不担心反人类的滚轮方向
+    rmtrash \           #妈妈在也不担心我在命令行下rm误删了
+    htop \              #监视、管理你的系统进程
+    mactex \            #写论文。。
+    panoply \           #不学大气的人表示：这什么鬼
+    neteasemusic \
+    free-download-manager \
+    qlcolorcode \
+    qlstephen \
+    qlmarkdown  \
+    java \
+    iina                #真的良心，开源免费，堪比Windows下的Potplayer
+</code></pre><p>如果你愿意也可以加个字体：<br>加两个源：</p>
+<pre><code>brew tap homebrew/cask-fonts
+brew cask install font-source-code-pro
+</code></pre><h4 id="收费区"><a href="#收费区" class="headerlink" title="收费区"></a>收费区</h4><p>装了Moom多年，很少用，因为Hyperdock的 <code>ctrl＋opt＋上/下/左/右</code> 满足了我大多数时候整理窗口的需求，在mac下找到windows的窗口管理体验。dock收费，switch免费。</p>
+<pre><code>brew cask install hyperdock hyperswitch
+</code></pre><p>常规软件：</p>
+<pre><code>brew cask install 
+    surge \                 #网络代理
+    proxifier \             #将socks真正变成系统级别代理
+    cleanmymac \            #论功能我服，UI我更服
+    endnote \               #文献管理
+    microsoft-office \      #2016、2019已经相当好了
+    iTerms                  #都说比Termimal好用
+</code></pre><p>放不下windows？你想要的我都有：<code>parallel-desktop</code></p>
 <h2 id="MAS"><a href="#MAS" class="headerlink" title="MAS"></a>MAS</h2><p>不堪忍受App Store的低效率，于是有了MAS。之所以这一部分不用brew是考虑到苹果的授权管理比较方便，不需要保存购买一家家软件的许可凭证，所以App Store上架的应用我一般就直接买了而不是去其自己家的网站下载。</p>
 <p>安装：</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>mas</span><br></pre></td></tr></table></figure>
-<p>常规操作：</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">mas search xxx</span><br><span class="line">mas <span class="keyword">install</span> xxx</span><br></pre></td></tr></table></figure>
-<p>常用的装了：</p>
+<pre><code>brew install mas
+</code></pre><p>常规操作：</p>
+<pre><code>mas search xxx
+mas install xxx
+</code></pre><p>常用的装了：</p>
 <p>PDF export<br>Spark<br>Paste 2<br>Popclip<br>iThoughtsX<br>Evernote<br>Day One<br>Eudic</p>
 <p>不常用的也装了：</p>
 <p>DaisyDisk<br>Movist<br>Pin<br>Magnet<br>EasyRes<br>Forklift<br>Growl<br>Battery Charging Alert<br>Reeder 3</p>
 <h2 id="X11"><a href="#X11" class="headerlink" title="X11"></a>X11</h2><p><code>ssh -Y</code>看不到GUI不怪你，因为这事真的麻烦。</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">brew </span>cask <span class="keyword">install </span>xquarz</span><br></pre></td></tr></table></figure>
-<p>然后修改</p>
+<pre><code>brew cask install xquarz
+</code></pre><p>然后修改</p>
 <p><img src="/images/201.jpg" alt="img_test"></p>
 <figure class="highlight"><pre><font face="monospace"><span id="L1" style="background-color: #303030"><font color="#bcbcbc">1&#xA0;</font></span>import sys
 <span id="L2" style="background-color: #303030"><font color="#bcbcbc">2&#xA0;</font></span>sys.stdout.write(&quot;Hello World!&quot;)
 </font></pre></figure>
-<figure class="highlight js"><figcaption><span>Javascript Array Syntax</span><a href="http://j.mp/pPUUmW" target="_blank" rel="noopener">MDN Documentation</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(arrayLength);</span><br><span class="line"><span class="keyword">var</span> arr2 = <span class="keyword">new</span> <span class="built_in">Array</span>(element0, element1, ..., elementN);</span><br></pre></td></tr></table></figure>
+<pre><code>var arr1 = new Array(arrayLength);
+var arr2 = new Array(element0, element1, ..., elementN);</code></pre>
 
     </div>
 </article>
@@ -376,7 +423,7 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mac-software-tech/" style="font-size: 16.588918261971294px;" class="tag-cloud-link">mac, software, tech</a>
+    <a href="/tags/mac-software-tech/" style="font-size: 12.404436846260706px;" class="tag-cloud-link">mac, software, tech</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
