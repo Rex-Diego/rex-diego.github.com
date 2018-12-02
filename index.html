@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="">
+<html class="theme-next pisces use-motion" lang="">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -81,6 +81,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="Rex与藻藻泥" type="application/atom+xml">
+
 
 
 
@@ -100,7 +102,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -233,16 +235,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
-            
-            Sitemap
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -281,7 +273,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rex">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/Rex-Diego/littlebin/master/7078058.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -370,7 +362,9 @@
         
           
           问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：172.16.0.72jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.51mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！
-那么，想从家里向服务器传数据，或
+那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？
+Mac &amp; LinuxSSH访问mine -&gt; jump -&gt; star这样是带图形界面的，可以xeyes进行测试：
+1ssh -t -o ProxyCommand='ssh -Y dam@159.226.113.51 -W 172.16
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -386,11 +380,16 @@
     
     
 
-    
+    <div>
+        
+    </div>
 
     
 
     
+
+    
+
 
     <footer class="post-footer">
       
@@ -430,7 +429,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rex">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/Rex-Diego/littlebin/master/7078058.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -520,7 +519,10 @@
           
           (zero)网络环境是一切的基础，真正高效的人不寄希望于国内镜像。https://github.com/erguotou520/electron-ssr/releases
 Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。
-1/usr/bin/ruby -e "$(curl -fs
+1/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+直接测试git，不能用会弹提示，顺便装好python，真是贴心。当然也可以xcode-select --install。
+基本操作：
+12345brew se
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -536,11 +538,16 @@ Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。
     
     
 
-    
+    <div>
+        
+    </div>
 
     
 
     
+
+    
+
 
     <footer class="post-footer">
       
@@ -597,6 +604,8 @@ Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="https://raw.githubusercontent.com/Rex-Diego/littlebin/master/7078058.png" alt="Rex">
+            
               <p class="site-author-name" itemprop="name">Rex</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -639,7 +648,42 @@ Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。
           </nav>
 
           
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Rex-Diego" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/480d9aa1869d" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/rex005" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-spinner"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://space.bilibili.com/3982814" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-youtube"></i>Bilibili</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -690,7 +734,7 @@ Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -732,10 +776,9 @@ Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。
   
 
 
+  
 
 
-  
-  
 
 
 
@@ -777,12 +820,7 @@ Brew见到一台嗷嗷待哺的mac，废话不多说，第一件事brew起来。
 
   
   
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
