@@ -393,10 +393,10 @@
       
         
           
-          问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：172.16.0.72jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.51mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！
+          问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：1.16.0.jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.*mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！
 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？
 Mac &amp; LinuxSSH访问mine -&gt; jump -&gt; star这样是带图形界面的，可以xeyes进行测试：
-1ssh -t -o ProxyCommand='ssh -Y dam@159.226.113.51 -W 172.16
+1ssh -t -o ProxyCommand='ssh -Y dam@159.226.113.* -W 1*.16.0.*:22
           ...
           <!--noindex-->
           <div class="post-button text-center">

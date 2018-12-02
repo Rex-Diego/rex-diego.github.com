@@ -88,19 +88,19 @@
 
 
 
-<meta name="description" content="问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：172.16.0.72jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.51mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！ 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？ Mac &amp;amp; LinuxSSH访问mine -&amp;gt">
+<meta name="description" content="问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：1.16.0.jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.*mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！ 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？ Mac &amp;amp; LinuxSSH访问mine -&amp;gt; jum">
 <meta name="keywords" content="tech">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内网穿透">
 <meta property="og:url" content="http://yoursite.com/2018/12/02/内网穿透/index.html">
 <meta property="og:site_name" content="Rex与藻藻泥">
-<meta property="og:description" content="问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：172.16.0.72jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.51mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！ 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？ Mac &amp;amp; LinuxSSH访问mine -&amp;gt">
+<meta property="og:description" content="问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：1.16.0.jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.*mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！ 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？ Mac &amp;amp; LinuxSSH访问mine -&amp;gt; jum">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/moba_ssh.jpeg">
-<meta property="og:updated_time" content="2018-12-02T01:39:19.000Z">
+<meta property="og:updated_time" content="2018-12-02T12:07:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内网穿透">
-<meta name="twitter:description" content="问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：172.16.0.72jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.51mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！ 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？ Mac &amp;amp; LinuxSSH访问mine -&amp;gt">
+<meta name="twitter:description" content="问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：1.16.0.jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.*mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！ 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？ Mac &amp;amp; LinuxSSH访问mine -&amp;gt; jum">
 <meta name="twitter:image" content="http://yoursite.com/images/moba_ssh.jpeg">
 
 
@@ -395,22 +395,25 @@
       
 
       
-        <p>问题描述：<br>现在有三台机器：<br>star：中科院内网服务器，无法直接从外网访问，IP：172.16.0.72<br>jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.51<br>mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！</p>
+        <p>问题描述：<br>现在有三台机器：<br>star：中科院内网服务器，无法直接从外网访问，IP：1<em>.16.0.</em><br>jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.*<br>mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！</p>
 <p>那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？</p>
 <h1 id="Mac-amp-Linux"><a href="#Mac-amp-Linux" class="headerlink" title="Mac &amp; Linux"></a>Mac &amp; Linux</h1><h2 id="SSH访问"><a href="#SSH访问" class="headerlink" title="SSH访问"></a>SSH访问</h2><h3 id="mine-gt-jump-gt-star"><a href="#mine-gt-jump-gt-star" class="headerlink" title="mine -&gt; jump -&gt; star"></a>mine -&gt; jump -&gt; star</h3><p>这样是带图形界面的，可以<code>xeyes</code>进行测试：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -t -o ProxyCommand=<span class="string">'ssh -Y dam@159.226.113.51 -W 172.16.0.72:22'</span> -Y zy@172.16.0.72</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -t -o ProxyCommand=<span class="string">'ssh -Y dam@159.226.113.* -W 1*.16.0.*:22'</span> -Y zy@1*.16.0.*</span><br></pre></td></tr></table></figure>
 <p>当然，通常我会在<code>~/.bashrc</code>建立一个alias，省的每次敲着一大串：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> sjumpstar=<span class="string">"ssh -t -o ProxyCommand='ssh -Y dam@159.226.113.51 -W 172.16.0.72:22' -Y zy@172.16.0.72"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> sjumpstar=<span class="string">"ssh -t -o ProxyCommand='ssh -Y dam@159.226.113.* -W 1*.16.0.*:22' -Y zy@1*.16.0.*"</span></span><br></pre></td></tr></table></figure>
 <p>其中<code>-t</code>是指远程建立一个tty，<code>-o ProxyCommand</code>是设置设定远程代理执行命令的option，<code>-Y</code>是指建立信任的X11传输协议。</p>
 <h2 id="scp-rsync传输文件"><a href="#scp-rsync传输文件" class="headerlink" title="scp rsync传输文件"></a>scp rsync传输文件</h2><h3 id="mine-gt-jump-gt-star-1"><a href="#mine-gt-jump-gt-star-1" class="headerlink" title="mine -&gt; jump -&gt; star"></a>mine -&gt; jump -&gt; star</h3><p>scp进行传输，少量传输还挺好，大量数据的备份不推荐：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r -o ProxyCommand=<span class="string">'ssh dam@159.226.113.51 -W 172.16.0.72:22'</span> zy@172.16.0.72:~/data ./data</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r -o ProxyCommand=<span class="string">'ssh dam@159.226.113.* -W 1*.16.0.*:22'</span> zy@1*.16.0.*:~/data ./data</span><br></pre></td></tr></table></figure>
 <p>其中<code>-r</code>指recursively递归复制，复制单独文件时可以拿掉。</p>
 <p>rsync传输，老司机的同步命令，适合大量数据的备份，支持断点续传：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -avPH -e <span class="string">"ssh -t -o ProxyCommand='ssh dam@159.226.113.51 -W 172.16.0.72:22'"</span> zy@172.16.0.72:~/data ./data</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -avPH -e <span class="string">"ssh -t -o ProxyCommand='ssh dam@159.226.113.* -W 1*.16.0.*:22'"</span> zy@1*.16.0.*:~/data ./data</span><br></pre></td></tr></table></figure>
 <h3 id="star-gt-jump-gt-mine"><a href="#star-gt-jump-gt-mine" class="headerlink" title="star -&gt; jump -&gt; mine"></a>star -&gt; jump -&gt; mine</h3><p>也很简单，反过来写：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r -o ProxyCommand=<span class="string">'ssh dam@159.226.113.51 -W 172.16.0.72:22'</span> ./data zy@172.16.0.72:~/data</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -avPH -e <span class="string">"ssh -t -o ProxyCommand='ssh dam@159.226.113.51 -W 172.16.0.72:22'"</span> ./data zy@172.16.0.72:~/data</span><br></pre></td></tr></table></figure>
-<p>当然，也有很多其他方法，比如笨笨的<code>zssh</code>；以及操作复杂的ssh映射本地socks再通过Proxifier配置代理；sshfs应该也可以实现，改日可以再聊。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r -o ProxyCommand=<span class="string">'ssh dam@159.226.113.* -W 1*.16.0.*:22'</span> ./data zy@1*.16.0.*:~/data</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -avPH -e <span class="string">"ssh -t -o ProxyCommand='ssh dam@159.226.113.* -W 1*.16.0.*:22'"</span> ./data zy@1*.16.0.*:~/data</span><br></pre></td></tr></table></figure>
+<p>当然，也有很多其他方法，比如笨笨的<code>zssh</code>；以及操作复杂的ssh映射本地socks再通过Proxifier配置代理。</p>
+<h2 id="sshfs-挂载本地"><a href="#sshfs-挂载本地" class="headerlink" title="sshfs 挂载本地"></a>sshfs 挂载本地</h2><p>最爽的难道不是将ssh映射到本地当成一块磁盘用吗？探索半天，一条命令足以：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshfs zy@1*.16.0.*:/ /mnt -o ssh_command=<span class="string">'ssh -J dam@159.226.113.*'</span></span><br></pre></td></tr></table></figure>
+<p>随便拖拽copy开不开心？卸载的话右键弹出即可。</p>
 <h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><p>一直认为<a href="https://mobaxterm.mobatek.net" target="_blank" rel="noopener">Mobaxterm</a>比Xshell好用很多，这里可以再次推荐下。首先，它是免费的（至少免费版够用）；其次，内置cygwin为底层更加方便，所以以上命令直接写在Moba的local terminal里面就可以直接用，而且左边的简易文件管理器基本做到无缝衔接。最重要的，UI漂亮，可定制！</p>
 <p>如果想保存这种设定，也很简单，新建ssh对话的时候有Proxy的选项，把跳板服务器的信息填进去就可以了。</p>
 <p><img src="/images/moba_ssh.jpeg" alt="新建ssh对话的时候有Proxy的选项"></p>
@@ -639,7 +642,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac-amp-Linux"><span class="nav-number">1.</span> <span class="nav-text">Mac &amp; Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH访问"><span class="nav-number">1.1.</span> <span class="nav-text">SSH访问</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mine-gt-jump-gt-star"><span class="nav-number">1.1.1.</span> <span class="nav-text">mine -&gt; jump -&gt; star</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scp-rsync传输文件"><span class="nav-number">1.2.</span> <span class="nav-text">scp rsync传输文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mine-gt-jump-gt-star-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">mine -&gt; jump -&gt; star</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#star-gt-jump-gt-mine"><span class="nav-number">1.2.2.</span> <span class="nav-text">star -&gt; jump -&gt; mine</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows"><span class="nav-number">2.</span> <span class="nav-text">Windows</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac-amp-Linux"><span class="nav-number">1.</span> <span class="nav-text">Mac &amp; Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH访问"><span class="nav-number">1.1.</span> <span class="nav-text">SSH访问</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mine-gt-jump-gt-star"><span class="nav-number">1.1.1.</span> <span class="nav-text">mine -&gt; jump -&gt; star</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scp-rsync传输文件"><span class="nav-number">1.2.</span> <span class="nav-text">scp rsync传输文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mine-gt-jump-gt-star-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">mine -&gt; jump -&gt; star</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#star-gt-jump-gt-mine"><span class="nav-number">1.2.2.</span> <span class="nav-text">star -&gt; jump -&gt; mine</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sshfs-挂载本地"><span class="nav-number">1.3.</span> <span class="nav-text">sshfs 挂载本地</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows"><span class="nav-number">2.</span> <span class="nav-text">Windows</span></a></li></ol></div>
             
 
           </div>
