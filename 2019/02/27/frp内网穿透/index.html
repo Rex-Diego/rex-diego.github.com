@@ -88,20 +88,18 @@
 
 
 
-<meta name="description" content="问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：1.16.0.jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.*mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！ 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？ Mac &amp;amp; LinuxSSH访问mine -&amp;gt; jum">
+<meta name="description" content="问题描述：star是内网注册了固定IP的服务器，无root权限；law则每次开机都有一个新的IP，作为服务器经常换IP是不能忍的。 由于问题很简单，这里只描述最简单的配置，不包含安全、网页访问等方面的需求，只说ssh服务的“呼叫转移”。 下载地址：https://github.com/fatedier/frp server端（frps）frps.inistar上的配置如下:12345678910[">
 <meta name="keywords" content="tech">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内网穿透">
-<meta property="og:url" content="http://yoursite.com/2018/12/02/内网穿透/index.html">
+<meta property="og:title" content="用frp干掉动态IP">
+<meta property="og:url" content="http://yoursite.com/2019/02/27/frp内网穿透/index.html">
 <meta property="og:site_name" content="Rex与藻藻泥">
-<meta property="og:description" content="问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：1.16.0.jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.*mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！ 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？ Mac &amp;amp; LinuxSSH访问mine -&amp;gt; jum">
+<meta property="og:description" content="问题描述：star是内网注册了固定IP的服务器，无root权限；law则每次开机都有一个新的IP，作为服务器经常换IP是不能忍的。 由于问题很简单，这里只描述最简单的配置，不包含安全、网页访问等方面的需求，只说ssh服务的“呼叫转移”。 下载地址：https://github.com/fatedier/frp server端（frps）frps.inistar上的配置如下:12345678910[">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/images/moba_ssh.jpeg">
-<meta property="og:updated_time" content="2018-12-02T12:07:10.000Z">
+<meta property="og:updated_time" content="2019-02-27T12:02:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="内网穿透">
-<meta name="twitter:description" content="问题描述：现在有三台机器：star：中科院内网服务器，无法直接从外网访问，IP：1.16.0.jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.*mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！ 那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？ Mac &amp;amp; LinuxSSH访问mine -&amp;gt; jum">
-<meta name="twitter:image" content="http://yoursite.com/images/moba_ssh.jpeg">
+<meta name="twitter:title" content="用frp干掉动态IP">
+<meta name="twitter:description" content="问题描述：star是内网注册了固定IP的服务器，无root权限；law则每次开机都有一个新的IP，作为服务器经常换IP是不能忍的。 由于问题很简单，这里只描述最简单的配置，不包含安全、网页访问等方面的需求，只说ssh服务的“呼叫转移”。 下载地址：https://github.com/fatedier/frp server端（frps）frps.inistar上的配置如下:12345678910[">
 
 
 
@@ -131,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/02/内网穿透/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/27/frp内网穿透/">
 
 
 
 
 
-  <title>内网穿透 | Rex与藻藻泥</title>
+  <title>用frp干掉动态IP | Rex与藻藻泥</title>
   
 
 
@@ -306,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/内网穿透/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/frp内网穿透/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rex">
@@ -323,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">内网穿透</h1>
+          <h1 class="post-title" itemprop="name headline">用frp干掉动态IP</h1>
         
 
         <div class="post-meta">
@@ -335,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-02T08:48:29+08:00">
-                2018-12-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-27T19:19:28+08:00">
+                2019-02-27
               </time>
             
 
@@ -395,28 +393,18 @@
       
 
       
-        <p>问题描述：<br>现在有三台机器：<br>star：中科院内网服务器，无法直接从外网访问，IP：1<em>.16.0.</em><br>jump：中科院跳板服务器，可以从内外网访问，但是只有端口22，IP：159.226.113.*<br>mine：家里的电脑，或PC或Mac，IP：不重要！ok？不重要！</p>
-<p>那么，想从家里向服务器传数据，或者下数据怎么破？尤其不想手动跳板怎么破？</p>
-<h1 id="Mac-amp-Linux"><a href="#Mac-amp-Linux" class="headerlink" title="Mac &amp; Linux"></a>Mac &amp; Linux</h1><h2 id="SSH访问"><a href="#SSH访问" class="headerlink" title="SSH访问"></a>SSH访问</h2><h3 id="mine-gt-jump-gt-star"><a href="#mine-gt-jump-gt-star" class="headerlink" title="mine -&gt; jump -&gt; star"></a>mine -&gt; jump -&gt; star</h3><p>这样是带图形界面的，可以<code>xeyes</code>进行测试：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -t -o ProxyCommand=<span class="string">'ssh -Y dam@159.226.113.* -W 1*.16.0.*:22'</span> -Y zy@1*.16.0.*</span><br></pre></td></tr></table></figure>
-<p>当然，通常我会在<code>~/.bashrc</code>建立一个alias，省的每次敲着一大串：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> sjumpstar=<span class="string">"ssh -t -o ProxyCommand='ssh -Y dam@159.226.113.* -W 1*.16.0.*:22' -Y zy@1*.16.0.*"</span></span><br></pre></td></tr></table></figure>
-<p>其中<code>-t</code>是指远程建立一个tty，<code>-o ProxyCommand</code>是设置设定远程代理执行命令的option，<code>-Y</code>是指建立信任的X11传输协议。</p>
-<h2 id="scp-rsync传输文件"><a href="#scp-rsync传输文件" class="headerlink" title="scp rsync传输文件"></a>scp rsync传输文件</h2><h3 id="mine-gt-jump-gt-star-1"><a href="#mine-gt-jump-gt-star-1" class="headerlink" title="mine -&gt; jump -&gt; star"></a>mine -&gt; jump -&gt; star</h3><p>scp进行传输，少量传输还挺好，大量数据的备份不推荐：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r -o ProxyCommand=<span class="string">'ssh dam@159.226.113.* -W 1*.16.0.*:22'</span> zy@1*.16.0.*:~/data ./data</span><br></pre></td></tr></table></figure>
-<p>其中<code>-r</code>指recursively递归复制，复制单独文件时可以拿掉。</p>
-<p>rsync传输，老司机的同步命令，适合大量数据的备份，支持断点续传：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -avPH -e <span class="string">"ssh -t -o ProxyCommand='ssh dam@159.226.113.* -W 1*.16.0.*:22'"</span> zy@1*.16.0.*:~/data ./data</span><br></pre></td></tr></table></figure>
-<h3 id="star-gt-jump-gt-mine"><a href="#star-gt-jump-gt-mine" class="headerlink" title="star -&gt; jump -&gt; mine"></a>star -&gt; jump -&gt; mine</h3><p>也很简单，反过来写：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r -o ProxyCommand=<span class="string">'ssh dam@159.226.113.* -W 1*.16.0.*:22'</span> ./data zy@1*.16.0.*:~/data</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -avPH -e <span class="string">"ssh -t -o ProxyCommand='ssh dam@159.226.113.* -W 1*.16.0.*:22'"</span> ./data zy@1*.16.0.*:~/data</span><br></pre></td></tr></table></figure>
-<p>当然，也有很多其他方法，比如笨笨的<code>zssh</code>；以及操作复杂的ssh映射本地socks再通过Proxifier配置代理。</p>
-<h2 id="sshfs-挂载本地"><a href="#sshfs-挂载本地" class="headerlink" title="sshfs 挂载本地"></a>sshfs 挂载本地</h2><p>最爽的难道不是将ssh映射到本地当成一块磁盘用吗？探索半天，一条命令足以：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshfs zy@1*.16.0.*:/ /mnt -o ssh_command=<span class="string">'ssh -J dam@159.226.113.*'</span></span><br></pre></td></tr></table></figure>
-<p>随便拖拽copy开不开心？卸载的话右键弹出即可。</p>
-<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><p>一直认为<a href="https://mobaxterm.mobatek.net" target="_blank" rel="noopener">Mobaxterm</a>比Xshell好用很多，这里可以再次推荐下。首先，它是免费的（至少免费版够用）；其次，内置cygwin为底层更加方便，所以以上命令直接写在Moba的local terminal里面就可以直接用，而且左边的简易文件管理器基本做到无缝衔接。最重要的，UI漂亮，可定制！</p>
-<p>如果想保存这种设定，也很简单，新建ssh对话的时候有Proxy的选项，把跳板服务器的信息填进去就可以了。</p>
-<p><img src="/images/moba_ssh.jpeg" alt="新建ssh对话的时候有Proxy的选项"></p>
+        <p>问题描述：<br>star是内网注册了固定IP的服务器，无root权限；<br>law则每次开机都有一个新的IP，作为服务器经常换IP是不能忍的。</p>
+<p>由于问题很简单，这里只描述最简单的配置，不包含安全、网页访问等方面的需求，只说ssh服务的“呼叫转移”。</p>
+<p>下载地址：<a href="https://github.com/fatedier/frp" target="_blank" rel="noopener">https://github.com/fatedier/frp</a></p>
+<h1 id="server端（frps）"><a href="#server端（frps）" class="headerlink" title="server端（frps）"></a>server端（frps）</h1><h2 id="frps-ini"><a href="#frps-ini" class="headerlink" title="frps.ini"></a>frps.ini</h2><p>star上的配置如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7070</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">auth_token = 12345678</span><br><span class="line">bind_addr = 0.0.0.0</span><br><span class="line">listen_port = 6000</span><br><span class="line"></span><br><span class="line">[web]</span><br><span class="line">vhost_http_port = 80</span><br></pre></td></tr></table></figure></p>
+<p>其中，star的防火墙中7070端口要保证属于已开放的端口。接下来，由于star服务器无root权限，手动设置“开机自启”。</p>
+<h2 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h2><p>第一步，在<code>~/bin/</code>目录下创建auto_run_frps文件，并将权限设为755（<code>chmod 755 auto_run_frps</code>）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">pid=`pgrep frps`</span><br><span class="line">if [[ -z $pid ]] ;then</span><br><span class="line">  echo &quot;[`date`]:frps stoped unexpectedlly,ready to restart it...&quot; &gt;&gt; $HOME/frps.log</span><br><span class="line">  (cd /data3/users/rex/soft/frp_0.16.1_linux_amd64; nohup ./frps -c frps.ini &gt;&gt; $HOME/bin/frps.log&gt;/dev/null &amp;)</span><br><span class="line">else</span><br><span class="line">  echo &quot;[`date`]:frps is running...&quot; &gt;&gt; $HOME/bin/frps.log</span><br><span class="line">fi</span><br></pre></td></tr></table></figure></p>
+<p>第二步，将以上脚本的运行加入<code>.bash_profile</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source $HOME/bin/auto_run_frps</span><br></pre></td></tr></table></figure></p>
+<h1 id="客户端-（frpc）"><a href="#客户端-（frpc）" class="headerlink" title="客户端 （frpc）"></a>客户端 （frpc）</h1><h2 id="frpc-ini"><a href="#frpc-ini" class="headerlink" title="frpc.ini"></a>frpc.ini</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr = 172.16.0.*</span><br><span class="line">server_port = 7070</span><br><span class="line">auth_token = 12345678</span><br><span class="line">login_fail_exit = false</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 22</span><br><span class="line">remote_port = 6000</span><br></pre></td></tr></table></figure>
+<h2 id="作为服务的开机自启"><a href="#作为服务的开机自启" class="headerlink" title="作为服务的开机自启"></a>作为服务的开机自启</h2><p>因为这台机器有root权限，并且分配新IP以后处于失踪状态，这里采用添加服务项的方式进行开机自启。编辑<code>/etc/systemd/frpc.service</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=frpc daemon</span><br><span class="line">After=syslog.target  network.target</span><br><span class="line">Wants=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">ExecStart=/home/rex/soft/frp_0.16.1_linux_amd64/frpc -c /home/rex/soft/frp_0.16.1_linux_amd64/frpc_star.ini</span><br><span class="line">Restart= always</span><br><span class="line">RestartSec=1min</span><br><span class="line">ExecStop=/usr/bin/killall frpc</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></p>
+<p>日常管理：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status frpc.service</span><br><span class="line">sudo systemctl restart frpc.service</span><br><span class="line">sudo systemctl enable frpc.service</span><br><span class="line">sudo systemctl stop frpc.service</span><br></pre></td></tr></table></figure></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>接下来就可以使用<code>ssh rex@star -p 6000</code>来直接连接law服务器了。</p>
+<p>举一反三的话，star如果作为一个暴露公网IP的服务器（比如VPS），这样就实现了内网穿透。</p>
 
       
     </div>
@@ -459,8 +447,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/29/mac-spin-up/" rel="next" title="mac spin-up">
-                <i class="fa fa-chevron-left"></i> mac spin-up
+              <a href="/2018/12/05/Kill-Zhihu-blocking/" rel="next" title="Kill Zhihu blocking">
+                <i class="fa fa-chevron-left"></i> Kill Zhihu blocking
               </a>
             
           </div>
@@ -469,8 +457,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/05/Kill-Zhihu-blocking/" rel="prev" title="Kill Zhihu blocking">
-                Kill Zhihu blocking <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/27/configs/sorts/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -646,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac-amp-Linux"><span class="nav-number">1.</span> <span class="nav-text">Mac &amp; Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH访问"><span class="nav-number">1.1.</span> <span class="nav-text">SSH访问</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mine-gt-jump-gt-star"><span class="nav-number">1.1.1.</span> <span class="nav-text">mine -&gt; jump -&gt; star</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scp-rsync传输文件"><span class="nav-number">1.2.</span> <span class="nav-text">scp rsync传输文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mine-gt-jump-gt-star-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">mine -&gt; jump -&gt; star</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#star-gt-jump-gt-mine"><span class="nav-number">1.2.2.</span> <span class="nav-text">star -&gt; jump -&gt; mine</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sshfs-挂载本地"><span class="nav-number">1.3.</span> <span class="nav-text">sshfs 挂载本地</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows"><span class="nav-number">2.</span> <span class="nav-text">Windows</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#server端（frps）"><span class="nav-number">1.</span> <span class="nav-text">server端（frps）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#frps-ini"><span class="nav-number">1.1.</span> <span class="nav-text">frps.ini</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开机自启"><span class="nav-number">1.2.</span> <span class="nav-text">开机自启</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#客户端-（frpc）"><span class="nav-number">2.</span> <span class="nav-text">客户端 （frpc）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#frpc-ini"><span class="nav-number">2.1.</span> <span class="nav-text">frpc.ini</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作为服务的开机自启"><span class="nav-number">2.2.</span> <span class="nav-text">作为服务的开机自启</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
